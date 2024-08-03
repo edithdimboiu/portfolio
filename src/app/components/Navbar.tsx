@@ -9,7 +9,7 @@ const Navbar = () => {
         </Link>
         <ul className="menu menu-horizontal justify-end md:ml-8">
           <li className="capitalize text-xl sm:text-2xl">
-            <Link href="">Portfolio</Link>
+            <Link href="/projects">Portfolio</Link>
           </li>
         </ul>
       </div>
