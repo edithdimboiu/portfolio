@@ -4,21 +4,21 @@ import React from "react";
 
 interface CardProps {
   title: string;
+  imageSource: string;
   description: string;
   demoLink: string;
   caseStudyLink: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, demoLink, caseStudyLink }) => (
-  <div className={`flex justify-center mt-12`}>
-    <div className="card lg:card-side bg-base-100 shadow-xl mb-2 flex-col lg:flex-row w-full max-w-5xl items-start justify-start">
+const Card: React.FC<CardProps> = ({ title, imageSource, description, demoLink, caseStudyLink }) => (
+  <div className={`flex justify-center pt-12`}>
+    <div className="card lg:card-side bg-base-100 shadow-xl mb-2 h-flex-col lg:flex-row w-full max-w-7xl items-start justify-start">
       <figure className="w-full lg:w-3/5">
-        <Image src="/assets/no-picture.jpg" alt="No Picture available" width={700} height={450} priority className="object-cover w-full h-full" />
+        <Image src={imageSource} alt="No Picture available" width={700} height={450} priority className="object-cover w-full h-full" />
       </figure>
-      <div className="card-body w-full lg:w-2/5 p-6">
+      <div className="card-body w-full lg:w-2/5 p-6 leading-7 lg:min-h-[25rem]">
         <h2 className="card-title text-2xl mb-4">{title}</h2>
-        <p className="mb-4">{description}</p>
-        <p className="mb-7">Readers can mark books as read or unread, with the app generating insightful statistics, including the number of books and pages read, as well as the total amount spent on books.</p>
+        <p className="mb-12">{description}</p>
         <div className="card-actions flex justify-evenly">
           <Link href={demoLink} target="_blank" rel="noopener noreferrer">
             <button className="btn btn-primary">Live Demo</button>
