@@ -1,6 +1,12 @@
 import Link from "next/link";
 import Carousel from "../components/Carousel";
 
+const slides: { id: string; src: string; type: "image" | "video" }[] = [
+  { id: "slide1", src: "/assets/slide1.jpg", type: "image" },
+  { id: "slide2", src: "/assets/slide2.jpg", type: "image" },
+  { id: "slide3", src: "/assets/slide3.jpg", type: "image" },
+  { id: "slide4", src: "/videos/personal-library.mov", type: "video" },
+];
 const MyLibraryProject: React.FC = () => {
   return (
     <div className="custom-heading">
@@ -20,7 +26,7 @@ const MyLibraryProject: React.FC = () => {
       </header>
 
       <section>
-        <Carousel />
+        <Carousel slides={slides} />
       </section>
 
       <main>

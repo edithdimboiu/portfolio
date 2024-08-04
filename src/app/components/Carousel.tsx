@@ -2,14 +2,17 @@
 
 import Image from "next/image";
 
-const slides = [
-  { id: "slide1", src: "/assets/no-picture.jpg", type: "image" },
-  { id: "slide2", src: "/assets/no-picture.jpg", type: "image" },
-  { id: "slide3", src: "/assets/no-picture.jpg", type: "image" },
-  { id: "slide4", src: "/videos/video1.mp4", type: "video" },
-];
+interface Slide {
+  id: string;
+  src: string;
+  type: "image" | "video";
+}
 
-const Carousel: React.FC = () => {
+interface CarouselProps {
+  slides: Slide[];
+}
+
+const Carousel: React.FC<CarouselProps> = ({ slides }) => {
   const handleNavigation = (event: React.MouseEvent<HTMLButtonElement>, targetId: string) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -23,7 +26,7 @@ const Carousel: React.FC = () => {
       {slides.map((slide, index) => (
         <div key={slide.id} id={slide.id} className="carousel-item relative w-full">
           {slide.type === "image" ? (
-            <Image src={slide.src} alt={`Slide ${index + 1}`} layout="fill" objectFit="cover" className="w-full h-full" />
+            <Image src={slide.src} alt={`Slide ${index + 1}`} layout="fill" objectFit="contain" className="w-full h-full" />
           ) : (
             <video className="w-full" width="320" height="240" controls>
               <source src={slide.src} type="video/mp4" />
