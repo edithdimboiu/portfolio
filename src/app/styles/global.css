@@ -3,3 +3,15 @@
 @import "tailwindcss/utilities";
 
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@layer base {
+  section h3 {
+    @apply text-xl md:text-2xl font-medium py-4;
+  }
+  section p {
+    @apply text-lg md:text-xl font-light m-4;
+  }
+  section li {
+    @apply text-lg md:text-xl font-light m-4 badge badge-lg badge-outline;
+  }
+}
