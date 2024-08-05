@@ -7,10 +7,11 @@ interface CardProps {
   imageSource: string;
   description: string;
   demoLink: string;
+  githubLink: string;
   caseStudyLink: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, imageSource, description, demoLink, caseStudyLink }) => (
+const Card: React.FC<CardProps> = ({ title, imageSource, description, demoLink, githubLink, caseStudyLink }) => (
   <div className={`flex justify-center pt-12`}>
     <div className="card lg:card-side bg-base-100 shadow-xl mb-2 h-flex-col lg:flex-row w-full max-w-7xl items-start justify-start">
       <figure className="w-full lg:w-3/5">
@@ -23,7 +24,9 @@ const Card: React.FC<CardProps> = ({ title, imageSource, description, demoLink, 
           <Link href={demoLink} target="_blank" rel="noopener noreferrer">
             <button className="btn btn-primary">Live Demo</button>
           </Link>
-          <button className="btn btn-secondary">Code</button>
+          <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+            <button className="btn btn-secondary">Code</button>
+          </Link>
           <Link href={caseStudyLink}>
             <button className="btn btn-accent">Case study</button>
           </Link>
