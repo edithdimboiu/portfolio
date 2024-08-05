@@ -7,6 +7,7 @@ const slides: { id: string; src: string; type: "image" | "video" }[] = [
   { id: "slide3", src: "/assets/slide3.jpg", type: "image" },
   { id: "slide4", src: "/videos/personal-library.mov", type: "video" },
 ];
+
 const MyLibraryProject: React.FC = () => {
   return (
     <div className="custom-heading">
@@ -20,7 +21,9 @@ const MyLibraryProject: React.FC = () => {
             </Link>
           </li>
           <li>
-            <button className="btn btn-secondary">Code</button>{" "}
+            <Link href="https://github.com/edithdimboiu/PersonalLibrary.git" target="_blank" rel="noopener noreferrer">
+              <button className="btn btn-secondary">Code</button>
+            </Link>{" "}
           </li>
         </ul>
       </header>
