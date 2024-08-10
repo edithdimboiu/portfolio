@@ -78,18 +78,6 @@ const PortfolioDescription = () => {
       </section>
 
       <section>
-        <h3>Challenges and Solutions</h3>
-        <p>
-          One significant challenge I faced was understanding Next.js's routing
-          system and file structure. Initially, adapting to the file-based
-          routing and learning how Next.js handles pages and dynamic routes took
-          some time. However, by studying the documentation and building simple
-          projects to practice, I gradually became comfortable with these
-          concepts.
-        </p>
-      </section>
-
-      <section>
         <h3>Future Improvements</h3>
         <p>Adding a blog section.</p>
       </section>

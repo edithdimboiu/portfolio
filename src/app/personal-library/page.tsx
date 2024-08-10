@@ -97,7 +97,7 @@ const PersonalLibraryDescription = () => {
           decided to implement React's Context API to handle global state
           management. This allowed me to efficiently share data and
           functionalities between components while keeping the code clean and
-          organized. My solution was the following:
+          organized.
         </p>
       </section>
 
@@ -106,7 +106,9 @@ const PersonalLibraryDescription = () => {
         <p>
           As the PersonalLibrary App was designed as a frontend app, the data is
           saved into localstorage. As a future improvement, I would consider
-          creating user accounts and saving the data into a database.
+          creating user accounts and saving the data into a database. Also
+          adding some filtering and sorting options would improve user
+          experience.
         </p>
       </section>
     </main>
