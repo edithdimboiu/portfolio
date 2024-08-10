@@ -3,7 +3,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="pt-2  mx-auto w-full fixed mt-0  z-10 top-0 bg-orange-50">
-      <div className="navbar px-8  mx-auto flex-col place-content-between sm:flex-row">
+      <div className="navbar px-8  mx-auto flex-row place-content-between">
         <Link href="/" className="">
           <h1 className="lg:text-8xl  text-6xl">ED</h1>
         </Link>
