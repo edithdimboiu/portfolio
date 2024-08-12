@@ -36,7 +36,7 @@ const MyLibraryProject: React.FC = () => {
 
 const PersonalLibraryDescription = () => {
   return (
-    <main data-testId="description">
+    <main data-testid="description">
       <section>
         <h3>How it all started</h3>
         <p>

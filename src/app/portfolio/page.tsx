@@ -30,7 +30,7 @@ const PortfolioProject: React.FC = () => {
 
 const PortfolioDescription = () => {
   return (
-    <main data-testId="description">
+    <main data-testid="description">
       <section>
         <h3>How it all started</h3>
         <p>
