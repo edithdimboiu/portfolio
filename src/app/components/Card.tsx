@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({
 }) => (
   <div className={`flex justify-center pt-12`}>
     <div
-      className="card lg:card-side bg-base-100 border-secondary border-2 border-double shadow-secondary shadow-md w-full max-w-7xl mb-2 flex flex-col items-start justify-start transition-all duration-300 hover:shadow-2xl hover:shadow-secondary
+      className="card lg:card-side card-custom w-full max-w-7xl mb-2 flex flex-col items-start justify-start 
         "
     >
       <figure className="w-full lg:w-3/5">

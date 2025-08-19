@@ -16,6 +16,10 @@
   }
 }
 
+.card-custom {
+  @apply bg-base-100 border-secondary border-2 border-double shadow-secondary shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-secondary;
+}
+
 @keyframes pulseOpacity {
   0%,
   100% {
