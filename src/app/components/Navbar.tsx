@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SocialLinks from "./SocialLinks";
+import Divider from "./Divider";
 
 const Navbar = () => {
   return (
@@ -13,9 +14,7 @@ const Navbar = () => {
         </Link>
         <SocialLinks />
       </div>
-      <div className="divider divider-primary my-0"></div>
-      <div className="divider divider-secondary my-0"></div>
-      <div className="divider divider-accent my-0"></div>
+      <Divider />
     </nav>
   );
 };
