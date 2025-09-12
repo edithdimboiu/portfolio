@@ -27,6 +27,6 @@
   "**/*.tsx",
   "**/*.test.ts",
   "**/*.test.tsx",
-  ".next/types/**/*.ts"],
+  ".next/types/**/*.ts", "src/app/utils/generateArticles.mjs", "src/app/utils/generateArticles.mjs"],
   "exclude": ["node_modules"]
 }
