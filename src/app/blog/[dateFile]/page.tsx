@@ -12,6 +12,15 @@ const components = {
   a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
     return <a {...props} target="_blank" rel="noopener noreferrer" />;
   },
+  h1: ({ ...props }) => (
+    <h1
+      className="text-2xl md:text-5xl font-bold mt-4 mb-2 text-left"
+      {...props}
+    />
+  ),
+  h3: ({ ...props }) => <h3 className="text-xl md:text-2xl" {...props} />,
+  p: ({ ...props }) => <p className="text-sm md:text-xl" {...props} />,
+  li: ({ ...props }) => <li className="text-sm md:text-xl " {...props} />,
 };
 
 export default function BlogPostPage({
