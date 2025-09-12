@@ -1,21 +1,20 @@
 import Link from "next/link";
+import SocialLinks from "./SocialLinks";
+import Divider from "./Divider";
 
 const Navbar = () => {
   return (
-    <nav className="pt-2  mx-auto w-full fixed mt-0  z-10 top-0 bg-orange-50">
+    <nav
+      className="pt-2  mx-auto w-full fixed mt-0  z-2 bg-base-100
+ top-0"
+    >
       <div className="navbar px-8  mx-auto flex-row place-content-between">
         <Link href="/" className="">
-          <h1 className="lg:text-8xl  text-6xl">ED</h1>
+          <h1 className="lg:text-5xl  text-3xl">Edith Dimboiu</h1>
         </Link>
-        <ul className="menu menu-horizontal justify-end md:ml-8">
-          <li className="capitalize text-xl sm:text-2xl">
-            <Link href="/projects">Portfolio</Link>
-          </li>
-        </ul>
+        <SocialLinks />
       </div>
-      <div className="divider divider-primary my-0"></div>
-      <div className="divider divider-secondary my-0"></div>
-      <div className="divider divider-accent my-0"></div>
+      <Divider />
     </nav>
   );
 };

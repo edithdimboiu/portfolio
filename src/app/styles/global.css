@@ -15,3 +15,31 @@
     @apply text-lg md:text-xl font-light m-4 badge badge-lg badge-outline;
   }
 }
+
+.card-custom {
+  @apply bg-base-100 border-secondary border-2 border-double shadow-secondary shadow-md transition-all duration-300 hover:shadow-2xl hover:shadow-secondary;
+}
+
+@keyframes pulseOpacity {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-pulse-delay-0 {
+  animation: pulseOpacity 1.5s infinite;
+}
+
+.animate-pulse-delay-200 {
+  animation: pulseOpacity 1.5s infinite;
+  animation-delay: 0.2s;
+}
+
+.animate-pulse-delay-400 {
+  animation: pulseOpacity 1.5s infinite;
+  animation-delay: 0.4s;
+}

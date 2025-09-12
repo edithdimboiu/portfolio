@@ -1,17 +1,9 @@
 import Link from "next/link";
 
-const Footer = () => {
+const SocialLinks = () => {
   return (
-    <footer
-      className="footer
-    text-neutral-content p-4 grid-auto-flow-column xs: grid-auto-flow-row  gap-y-4   items-center fixed bottom-0 bg-orange-50"
-    >
-      <aside className="justify-self-center md:justify-self-start">
-        <p className="text-2lg">
-          Copyright © {new Date().getFullYear()} - All right reserved
-        </p>
-      </aside>
-      <nav className="grid-flow-col  items-center justify-self-center md:justify-self-end">
+    <div className="text-neutral-content p-4 flex gap-6 items-center justify-center md:justify-end">
+      <nav className="flex gap-6">
         <Link
           href="https://linkedin.com/in/edith-dimboiu-1670b869"
           target="_blank"
@@ -45,7 +37,7 @@ const Footer = () => {
           </svg>
         </Link>
       </nav>
-    </footer>
+    </div>
   );
 };
-export default Footer;
+export default SocialLinks;
