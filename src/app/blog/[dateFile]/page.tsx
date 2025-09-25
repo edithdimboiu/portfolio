@@ -1,6 +1,8 @@
 import posts from "@/data/posts.json";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css";
 
 export async function generateStaticParams() {
   return posts.map(post => ({
@@ -14,13 +16,16 @@ const components = {
   },
   h1: ({ ...props }) => (
     <h1
-      className="text-2xl md:text-5xl font-bold mt-4 mb-2 text-left"
+      className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-2 text-left"
       {...props}
     />
   ),
   h3: ({ ...props }) => <h3 className="text-xl md:text-2xl" {...props} />,
-  p: ({ ...props }) => <p className="text-sm md:text-xl" {...props} />,
-  li: ({ ...props }) => <li className="text-sm md:text-xl " {...props} />,
+  p: ({ ...props }) => <p className="text-base md:text-xl" {...props} />,
+  li: ({ ...props }) => <li className="text-base md:text-xl " {...props} />,
+  pre: ({ ...props }) => <pre className="text-xs md:text-lg  " {...props} />,
+  code: ({ ...props }) => <code className="text-base md:text-lg" {...props} />,
+  span: ({ ...props }) => <span className="text-base md:text-lg " {...props} />,
 };
 
 export default function BlogPostPage({
@@ -37,12 +42,16 @@ export default function BlogPostPage({
   const fullContent = `# ${post.title}\n\n**${post.displayDate}**\n\n${post.content}`;
 
   return (
-    <main className="max-w-3xl mx-auto p-4">
-      <article className="prose prose-lg prose-business text-justify">
-        <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
-          {fullContent}
-        </ReactMarkdown>
-      </article>
-    </main>
+    // <main className="max-w-3xl sm:mx-auto sm:p-4">
+    <article className="prose lg:prose-xl prose-business text-justify">
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeHighlight]}
+        components={components}
+      >
+        {fullContent}
+      </ReactMarkdown>
+    </article>
+    // </main>
   );
 }
