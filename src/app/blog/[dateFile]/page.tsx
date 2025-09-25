@@ -20,7 +20,9 @@ const components = {
       {...props}
     />
   ),
-  h3: ({ ...props }) => <h3 className="text-xl md:text-2xl" {...props} />,
+  h3: ({ ...props }) => (
+    <h3 className="text-xl md:text-2xl text-left" {...props} />
+  ),
   p: ({ ...props }) => <p className="text-base md:text-xl" {...props} />,
   li: ({ ...props }) => <li className="text-base md:text-xl " {...props} />,
   pre: ({ ...props }) => <pre className="text-xs md:text-lg  " {...props} />,

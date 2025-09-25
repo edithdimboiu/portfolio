@@ -19,7 +19,7 @@ export default function RootLayout({
         <header className="fixed top-0 w-full shadow-md z-50">
           <Navbar />
         </header>
-        <main className="flex-grow mt-28 mb-20 p-6 max-w-screen-xl mx-auto content-center">
+        <main className="flex-grow mt-28 mb-20 p-6 max-w-screen-xl sm:mx-auto content-center">
           {children}
         </main>
       </body>
