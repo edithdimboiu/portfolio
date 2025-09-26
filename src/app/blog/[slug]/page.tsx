@@ -30,11 +30,7 @@ const components = {
   span: ({ ...props }) => <span className="text-base md:text-lg " {...props} />,
 };
 
-export default function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = posts.find(p => p.slug === params.slug);
 
   if (!post) {
@@ -44,8 +40,7 @@ export default function BlogPostPage({
   const fullContent = `# ${post.title}\n\n**${post.displayDate}**\n\n${post.content}`;
 
   return (
-    // <main className="max-w-3xl sm:mx-auto sm:p-4">
-    <article className="prose lg:prose-xl prose-business text-justify">
+    <article className="prose lg:prose-xl prose-business text-justify py-6 sm:py-10">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight]}
@@ -54,6 +49,5 @@ export default function BlogPostPage({
         {fullContent}
       </ReactMarkdown>
     </article>
-    // </main>
   );
 }
