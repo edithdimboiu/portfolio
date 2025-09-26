@@ -28,6 +28,7 @@ export function getAllPosts() {
         displayDate,
         content,
         summary,
+        slug: data.slug,
       };
     })
     .sort((a, b) => b.dateFile.localeCompare(a.dateFile));

@@ -6,7 +6,7 @@ import "highlight.js/styles/github-dark.css";
 
 export async function generateStaticParams() {
   return posts.map(post => ({
-    dateFile: post.dateFile,
+    slug: post.slug,
   }));
 }
 
@@ -33,9 +33,9 @@ const components = {
 export default function BlogPostPage({
   params,
 }: {
-  params: { dateFile: string };
+  params: { slug: string };
 }) {
-  const post = posts.find(p => p.dateFile === params.dateFile);
+  const post = posts.find(p => p.slug === params.slug);
 
   if (!post) {
     return <p className="text-2xl">Article not found.</p>;

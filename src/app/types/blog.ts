@@ -4,4 +4,5 @@ export interface BlogPost {
   summary: string;
   dateFile: string;
   displayDate: string;
+  slug: string;
 }

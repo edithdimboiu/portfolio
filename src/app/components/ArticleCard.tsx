@@ -7,7 +7,7 @@ interface ArticleCardProps {
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ post }) => {
-  const { title, displayDate, dateFile, summary } = post;
+  const { title, displayDate, summary,slug } = post;
 
   return (
     <article className="card card-custom ">
@@ -17,7 +17,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ post }) => {
         <p className="mt-2">{summary}</p>
         <div className="card-actions justify-end mt-4">
           <Link
-            href={`/blog/${dateFile}`}
+            href={`/blog/${slug}`}
             className="btn btn-outline btn-primary btn-sm"
           >
             Read more →
