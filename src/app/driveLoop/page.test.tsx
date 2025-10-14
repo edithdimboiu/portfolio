@@ -12,7 +12,7 @@ jest.mock("next/link", () => {
 describe("DriveLoop Page", function () {
   test("renders the correct title", () => {
     render(<DriveLoopProject />);
-    screen.getByText("Drive Loop");
+    screen.getByText("DriveLoop App");
   });
   test("renders the right code link", () => {
     render(<DriveLoopProject />);

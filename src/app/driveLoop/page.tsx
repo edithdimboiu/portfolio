@@ -13,7 +13,7 @@ const slides: { id: string; src: string; type: "image" | "video" }[] = [
 ];
 const links = [
   {
-    href: "https://driveloop.vercel.app/",
+    href: "https://driveloop.vercel.app",
     buttonClass: "btn btn-primary",
     text: "Live Demo",
   },

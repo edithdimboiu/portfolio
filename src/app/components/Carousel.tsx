@@ -40,8 +40,8 @@ const Carousel: React.FC<CarouselProps> = ({ slides }) => {
             <Image
               src={slide.src}
               alt={`Slide ${index + 1}`}
-              layout="fill"
-              objectFit="contain"
+              fill
+              style={{ objectFit: "contain" }}
               className="w-full h-full"
             />
           ) : (

@@ -1,4 +1,4 @@
-import { describe, expect, test, jest } from "@jest/globals";
+import { describe, expect, test, jest, beforeEach } from "@jest/globals";
 import { render, screen } from "@testing-library/react";
 import PortfolioProject from "./page";
 
@@ -10,15 +10,15 @@ jest.mock("next/link", () => {
 });
 
 describe("PortfolioProject Page", function () {
-  test("renders the correct title", () => {
+  beforeEach(() => {
     render(<PortfolioProject />);
+  });
+  test("renders the correct title", () => {
     screen.getByText("Portfolio");
   });
 
   test("renders the right code link", () => {
-    render(<PortfolioProject />);
     const codeLink = screen.queryByRole("link", { name: /Code/i });
-    expect(codeLink).not.toBeNull();
     if (codeLink) {
       expect(codeLink.getAttribute("href")).toBe(
         "https://github.com/edithdimboiu/portfolio.git"
@@ -26,11 +26,9 @@ describe("PortfolioProject Page", function () {
     }
   });
   test("renders the carousel component", () => {
-    render(<PortfolioProject />);
     screen.getByTestId("carousel");
   });
   test("renders the project description component", () => {
-    render(<PortfolioProject />);
     screen.getByTestId("description");
   });
 });

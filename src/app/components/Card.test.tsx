@@ -59,19 +59,17 @@ describe("Card", () => {
 
   test("sets correct github link", () => {
     render(<Card {...props} />);
-    const githubLink = screen.queryByRole("link", { name: /Code/i });
-    expect(githubLink).not.toBeNull();
-    if (githubLink) {
-      expect(githubLink.getAttribute("href")).toBe(
-        "https://github.com/example"
-      );
-    }
+    const githubLink = screen.getByRole("link", {
+      name: /GitHub repository for /i,
+    });
+    expect(githubLink.getAttribute("href")).toBe("https://github.com/example");
   });
 
   test("sets correct case study link", () => {
     render(<Card {...props} />);
     const caseStudyLink = screen.queryByRole("link", { name: /Case study/i });
     expect(caseStudyLink).not.toBeNull();
+
     if (caseStudyLink) {
       expect(caseStudyLink.getAttribute("href")).toBe(
         "https://casestudy.example.com"
