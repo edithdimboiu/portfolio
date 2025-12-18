@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-interface Slide {
+export interface Slide {
   id: string;
   src: string;
   type: "image" | "video";
